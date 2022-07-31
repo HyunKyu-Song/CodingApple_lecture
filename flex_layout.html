@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flex_Layout</title>
+  <style>
+    .container {
+      display: flex;
+      background-color: coral;
+      padding: 10px;
+      height: 40px;
+      font-weight: bold;
+      align-items: center;
+    }
+
+    .nav-item:nth-of-type(2) {
+      flex-grow: 1;
+    }
+
+    .nav-item:nth-of-type(2)~.nav-item {
+      padding-right: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="container">
+    <div class="nav-item">Group</div>
+    <div class="nav-item"></div>
+    <div class="nav-item">Twice</div>
+    <div class="nav-item">Fromis_9</div>
+    <div class="nav-item">(G)-idle</div>
+  </nav>
+
+  
+</body>
+
+</html>

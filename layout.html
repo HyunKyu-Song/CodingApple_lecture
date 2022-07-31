@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>layout</title>
+  <style>
+    body{
+      margin: 0;
+    }
+    .main-background{
+      width: 100%;
+      height: 500px;
+      background-image: url(./img/영우_고딩시절.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      padding: 1px;
+      position: relative;
+    }
+    .main-content{
+      text-align: center;
+    }
+    .scene{
+      color: coral;
+      font-size: 30px;
+      font-weight: bold;
+      padding-top: 150px;
+    }
+    .text{
+      color: #eee;
+      font-size: 20px;
+    }
+    .main-btn{
+      padding: 15px;
+      border: none;
+      border-radius: 15px;
+      font-size: 20px;
+      background-color: white;
+      position: absolute;
+      margin-left: auto;
+      margin-right: auto;
+      width: 150px;
+      left: 0;
+      right: 0;
+    }
+    .main-btn a{
+      text-decoration: none;
+      color: black;
+    }
+    .explain{
+      background-color: silver;
+      position: absolute;
+      width: 300px;
+      padding: 20px;
+      margin: auto;
+      left: 0;
+      right: 0;
+      top: calc(100% - 80px);
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="main-background">
+    <div class="main-content">
+      <p class="scene">우영우 고딩시절</p>
+      <p class="text">
+        너랑 있으면 내가 안전해. 친구가 되줄게. 너 친구 없잖아.
+      </p>
+      <button class="main-btn">
+        <a href="https://www.youtube.com/watch?v=eK0QGjgFPHo" target="_blank">시청하기</a> </button>
+      <div class="explain">
+        <p>
+          [이상한변호사우영우 | EP4 | 하이라이트] "너 친구 없잖아. 내가 친구 해줄까?" ❤️동그라미 X 우영우❤️ 그 끈끈한 우정이 시작된 현장으로 출발😝
+        </p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

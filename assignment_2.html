@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>form</title>
+  <style>
+    .form-name{
+      display: inline-block;
+    }
+    input{
+      padding: 5px;
+    }
+    button{
+      background-color: orange;
+      border-radius: 5px;
+      border: none;
+      padding: 8px;
+      color: white;
+      width: 140px;
+    }
+    .form-message input{
+      width: 355px;
+      height: 100px;
+    }
+    .form-check{
+      display: inline-block;
+      margin-right: 132px;
+      font-size: 15px;
+    }
+    .form-email{
+      margin-bottom: 20px;
+    }
+    .form-name{
+      margin-bottom: 20px;
+      padding-right: 10px;
+    }
+    .form-message{
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>form</h1><hr>
+  <h2>contact us</h2>
+  <form action="">
+    <div class="form-email">
+      <label for="user_email">Your Email</label><br>
+      <input type="email" id="user_email" placeholder="email@example.com">
+    </div>
+    <div class="form-name">
+      <label for="user_Fname">First name</label><br>
+      <input type="text" id="user_Fname">
+    </div>
+    <div class="form-name">
+      <label for="user_Lname">Last name</label><br>
+      <input type="text" id="user_Lname">
+    </div>
+    <div class="form-message">
+      <label for="user_message">Message</label><br>
+      <input type="text" id="user_message">
+    </div>
+    <div class="form-check">
+      <input type="checkbox" id="user_check">
+      <label for="user_check">Subscribe</label>
+    </div>
+    <button type="submit">SEND</button>
+  </form>
+</body>
+</html>

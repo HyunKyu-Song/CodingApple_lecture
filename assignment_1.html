@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .container{
+      width: 800px;
+      height: 250px;
+
+      /* 화면 가운데에 정렬 시켜줌 */
+      margin-left: auto;
+      margin-right: auto;
+      /* 화면 가운데에 정렬 시켜줌 */
+    }
+    .blog-content, .right-item{
+      margin: 10px;
+    }
+    .blog-content{
+      width: 65%;
+      height: 90%;
+      float: left;
+    }
+    .right-item{
+      width: 30%;
+      height: 90%;
+      float: left;
+    }
+    .blog-profile{
+      height: 50px;
+      margin-top: 13px;
+      margin-left: 5px;
+      float: left;
+    }
+    .right-img{
+      height: 220px;
+      display: inline;
+      margin-top: 3px;
+      margin-left: 10px;
+    }
+
+    .name{
+      float: left;
+      padding: 3px;
+      margin-left: 10px;
+      margin-top: 15px;
+    }
+    .name p{
+      margin-bottom: 0;
+      margin-top: 0;
+    }
+    .text{
+      /* float: left; */
+      clear: both;
+      margin-left: 10px;
+      padding-top: 10px;
+      padding-left: 0px;
+      padding-right: 0px;
+      margin-right: 10px;
+    }
+    .text > h3{
+      margin-top: 0px;
+      margin-bottom: 0px;
+    }
+  </style>
+  <title>Assignment</title>
+</head>
+<body>
+  <h1>블로그 글 목록 만들기</h1>
+  <div class="container">
+    <div class="blog-content">
+      <div>
+        <img src="../img/lion.png" alt="profile" class="blog-profile">
+        <div class="name">
+          <p><strong>Lion</strong></p>
+          <p>1시간 전</p>
+        </div>
+      </div>
+      <div class="text">
+        <h3>Paragraph</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias distinctio sed odit! Distinctio pariatur repudiandae, sit suscipit ipsam aut quia, id veritatis repellat ad, voluptatibus voluptatum culpa libero praesentium quis?
+        </p>
+      </div>
+    </div>
+    <div class="right-item">
+      <img class="right-img" src="../img/lion.png" alt="">
+    </div>
+  </div>
+</body>
+</html>
