@@ -1,0 +1,179 @@
+body {
+  margin: 0;
+}
+
+div {
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+h4 {
+  font-size: 22px;
+}
+
+.main-background {
+  background-image: linear-gradient(to bottom, #499add, #4e61c0);
+  height: 550px;
+  padding: 20px;
+  color: white;
+}
+
+.main-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.main-text {
+  float: left;
+  margin-top: 50px;
+}
+
+.main-iphone {
+  width: 400px;
+  float: right;
+  margin-top: 95px;
+}
+
+.btn {
+  padding: 15px 20px;
+  font-size: 16px;
+  font-family: 'nanumsquare';
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-black {
+  background: #444;
+  color: white;
+}
+
+/* .btn-black:hover {
+  마우스올렸을시 스타일
+}
+
+.btn-black:active {
+  커서가찍혔을시 스타일
+} */
+
+/*큰 레이아웃*/
+.service {
+  background-color: #4e61c0;
+  width: 100%;
+  color: white;
+  text-align: center;
+  padding: 60px 30px 50px 30px;
+}
+
+.service-items {
+  display: flex;
+}
+
+.service-items div {
+  width: 25%;
+}
+
+/*나머지 쓸데없는 디자인들*/
+.service h5 {
+  margin-bottom: 0px;
+}
+
+.service-icon {
+  background: white;
+  color: #4e61c0;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  padding: 15px;
+}
+
+.portfolio {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  text-align: center;
+}
+
+.portfolio-item {
+  float: left;
+  width: 50%;
+  height: 350px;
+  background-size: cover;
+  position: relative;
+}
+
+.portfolio-img1 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../img/portfolio-1.jpg');
+}
+
+.portfolio-img2 {
+  background-image: url('../img/portfolio-2.jpg');
+}
+
+.portfolio-img3 {
+  background-image: url('../img/portfolio-3.jpg');
+}
+
+.portfolio-img4 {
+  background-image: url('../img/portfolio-4.jpg');
+}
+
+
+.portfolio-container {
+  text-align: left;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.portfolio-text {
+  color: white;
+  padding: 50px;
+  width: 100%;
+}
+
+.white-box {
+  position: absolute;
+  width: 90%;
+  height: 90%;
+  z-index: 2;
+  border: 0px solid white;
+}
+
+.white-box:hover {
+  border: 30px solid white;
+  transition: 1s;
+}
+
+@media screen and (max-width : 992px) {
+  .main-iphone {
+    width: 260px;
+    display: block;
+    float: none;
+    margin: auto;
+    margin-top: 42px;
+  }
+
+  .main-text {
+    float: none;
+    margin-top: 50px;
+    text-align: center;
+  }
+
+  .service-items {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .service-items div {
+    width: 100%;
+  }
+
+  .portfolio-item {
+    float: none;
+    width: 100%
+  }
+}
