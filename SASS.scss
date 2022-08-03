@@ -1,0 +1,19 @@
+%box{
+  width: 200px;
+  height: 200px;
+  padding: 20px;
+  margin: 30px;
+}
+
+.red-box{
+  @extend %box;
+  background-color: red;
+}
+.green-box{
+  @extend %box;
+  background-color: green;
+}
+.blue-box{
+  @extend %box;
+  background-color: blue;
+}
