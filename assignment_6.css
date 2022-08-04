@@ -1,0 +1,104 @@
+@keyframes shake{
+  0%{
+    transform: rotate(0deg);
+  }
+  30%{
+    transform: rotate(-10deg);
+  }
+  50%{
+    transform: rotate(10deg);
+  }
+  70%{
+    transform: rotate(-10deg);
+  }
+  100%{
+    transform: rotate(0deg);
+  }
+}
+
+.ani-box{
+  background-color: skyblue;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  width: 100px;
+  text-align: center;
+}
+
+.ani-box:hover{
+  animation-name: shake;
+  animation-duration: 0.5s;
+}
+
+
+
+
+
+@keyframes rt{
+  0%{
+    transform: rotate(0deg);
+  }
+  20%{
+    transform: rotate(-15deg);
+  }
+  100%{
+    transform: rotate(45deg) scale(1.5);
+  }
+  
+}
+
+.ani-cross{
+  font-size: 50px;
+  text-align: center;
+  /* border: 3px solid; */
+  width: 100px;
+}
+
+.ani-cross:hover{
+  animation-name: rt;
+  animation-duration: 1s;
+}
+
+
+
+
+
+
+
+.ani-menu{
+  background-color: black;
+  color: white;
+  width: 300px;
+  height: 300px;
+  transform: translateX(-80%);
+}
+.menu{
+  text-align: right;
+  padding: 20px;
+}
+.ani-menu:hover .menu{
+  text-align: center;
+}
+.ani-menu:hover{
+  transform: translateX(-10%);
+  transition-duration: 1s;
+  text-align: center;
+}
+
+@keyframes slide{
+  0%{
+    transform: translateX(0);
+  }
+  50%{
+    transform: translateX(30%) skew(-50deg);
+  }
+  100%{
+    transform: skew(-20deg);
+  }
+}
+
+.ani-menu:hover .item{
+  animation-name: slide;
+  animation-duration: 0.8s;
+  animation-fill-mode: forwards;
+}

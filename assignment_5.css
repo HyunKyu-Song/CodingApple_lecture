@@ -1,0 +1,55 @@
+.nav-list li {
+  border: 1px solid #eee;
+  padding: 15px;
+  list-style: none;
+}
+.nav-list li:active {
+  background-color: skyblue;
+}
+
+.orange-box, .skyblue-box, .green-box {
+  font-size: 20px;
+  margin: 15px;
+  border-radius: 5px;
+  height: 35px;
+  opacity: 0.8;
+}
+.orange-box p, .skyblue-box p, .green-box p {
+  padding: 3px;
+}
+
+.green-box {
+  background-color: green;
+}
+
+.skyblue-box {
+  background-color: skyblue;
+}
+
+.orange-box {
+  background-color: orange;
+}
+
+.col-3, .col-4, .col-6 {
+  background-color: #eee;
+  padding: 5px;
+  border-radius: 3px;
+  border: 2px solid;
+}
+
+.row {
+  display: flex;
+  margin: 10px;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-4 {
+  width: 33.3%;
+}
+
+.col-3 {
+  width: 25%;
+}/*# sourceMappingURL=assignment_5.css.map */

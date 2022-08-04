@@ -1,0 +1,76 @@
+.nav-list{
+  li{
+    border: 1px solid #eee;
+    padding: 15px;
+    list-style: none;
+  }
+
+  li:active{
+    background-color: skyblue;
+  }
+}
+
+
+
+
+
+%box{
+  font-size: 20px;
+  margin: 15px;
+  border-radius: 5px;
+  height: 35px;
+  opacity: 0.8;
+
+  p{
+    padding: 3px;
+  }
+}
+
+.green-box{
+  @extend %box;
+  background-color: green;
+}
+.skyblue-box{
+  @extend %box;
+  background-color: skyblue;
+}
+.orange-box{
+  @extend %box;
+  background-color: orange;
+}
+
+
+
+
+
+%box-size{
+  background-color: #eee;
+  padding: 5px;
+  border-radius: 3px;
+  border: 2px solid;
+}
+
+@mixin row() {
+  display: flex;
+}
+
+@mixin col($rate) {
+  width: $rate;
+}
+
+.row{
+  @include row();
+  margin: 10px;
+}
+.col-6{
+  @include col(50%);
+  @extend %box-size;
+}
+.col-4{
+  @include col(33.3%);
+  @extend %box-size;
+}
+.col-3{
+  @include col(25%);
+  @extend %box-size;
+}
