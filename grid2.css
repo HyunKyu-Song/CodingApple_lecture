@@ -1,0 +1,67 @@
+body{
+  margin: 10px;
+}
+
+.grid-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  height: calc(100vh - 20px);
+  grid-template-areas: 
+  "main main side1"
+  "main main side2"
+  "bt1 bt2 bt3";
+  }
+
+.grid-container div{
+  border: 1px solid black;
+}
+
+.main-img{
+  background-image: url(../img/이새롬.jpeg);
+  background-size: cover;
+  grid-area: main;
+}
+
+.side-img1{
+  background-image: url(../img/송하영.jpeg);
+  background-size: cover;
+  grid-area: side1;
+}
+.side-img2{
+  background-image: url(../img/장규리.jpeg);
+  background-size: cover;
+  grid-area: side2;
+}
+
+.bottom-img1{
+  background-image: url(../img/박지원.jpeg);
+  background-size: cover;
+  grid-area: bt1;
+}
+.bottom-img2{
+  background-image: url(../img/노지선.jpeg);
+  background-size: cover;
+  grid-area: bt2;
+}
+.bottom-img3{
+  background-image: url(../img/이서연.jpeg);
+  background-size: cover;
+  grid-area: bt3;
+}
+
+@media screen and (max-width: 768px){
+  .grid-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    height: 4000px;
+    grid-template-areas: 
+    "main"
+    "side1"
+    "side2"
+    "bt1"
+    "bt2"
+    "bt3";
+  }
+}
