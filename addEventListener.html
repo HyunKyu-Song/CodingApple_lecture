@@ -18,7 +18,8 @@
 <body>
   <div class="alert-box" id="alert">
     <p id="ment">알림창임</p>
-    <button onclick="AlertAction('none')">닫기</button>
+    <button id="close">닫기</button>
+    <!-- <button onclick="AlertAction('none')">닫기</button> -->
   </div>
   <button onclick="AlertAction('block', '아이디를 입력하시오')">버튼1</button>
   <button onclick="AlertAction('block', '비밀번호를 입력하시오')">버튼2</button>
@@ -28,6 +29,14 @@
       document.getElementById('alert').style.display = input1;
       document.getElementById('ment').innerHTML = input2;
     }
+
+
+    document.getElementById('close').addEventListener('click', 
+    function(){
+      document.getElementById('alert').style.display = 'none';
+    })
+
+
   </script>
 
 </body>

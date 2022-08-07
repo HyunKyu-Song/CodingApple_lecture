@@ -4,68 +4,57 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>form</title>
+  <title>Document</title>
   <style>
-    .form-name{
-      display: inline-block;
+    .black-bg {
+      width : 100%;
+      height : 100%;
+      position : fixed;
+      background : rgba(0,0,0,0.5);
+      z-index : 5;
+      padding: 30px;
     }
-    input{
-      padding: 5px;
-    }
-    button{
-      background-color: orange;
+    .white-bg {
+      background: white;
       border-radius: 5px;
-      border: none;
-      padding: 8px;
-      color: white;
-      width: 140px;
+      padding: 30px;
+      display: none;
     }
-    .form-message input{
-      width: 355px;
-      height: 100px;
-    }
-    .form-check{
-      display: inline-block;
-      margin-right: 132px;
-      font-size: 15px;
-    }
-    .form-email{
-      margin-bottom: 20px;
-    }
-    .form-name{
-      margin-bottom: 20px;
-      padding-right: 10px;
-    }
-    .form-message{
-      margin-bottom: 20px;
+    .show{
+      display: block;
     }
   </style>
 </head>
 <body>
-  <h1>form</h1><hr>
-  <h2>contact us</h2>
-  <form action="">
-    <div class="form-email">
-      <label for="user_email">Your Email</label><br>
-      <input type="email" id="user_email" placeholder="email@example.com">
+  <div class="black-bg">
+    <button class="BTN">버튼</button>
+    <div class="white-bg">
+      <h4>로그인하세요</h4>
+      <button class="btn btn-danger" id="close">닫기</button>
     </div>
-    <div class="form-name">
-      <label for="user_Fname">First name</label><br>
-      <input type="text" id="user_Fname">
-    </div>
-    <div class="form-name">
-      <label for="user_Lname">Last name</label><br>
-      <input type="text" id="user_Lname">
-    </div>
-    <div class="form-message">
-      <label for="user_message">Message</label><br>
-      <input type="text" id="user_message">
-    </div>
-    <div class="form-check">
-      <input type="checkbox" id="user_check">
-      <label for="user_check">Subscribe</label>
-    </div>
-    <button type="submit">SEND</button>
-  </form>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+  <script>
+
+    $('.BTN').on('click', function(){
+      $('.white-bg').fadeToggle('show');
+    });
+
+    // $('.btn').on('click', function(){
+    //   $('.white-bg').fadeOut();
+    // });
+
+    // $('.white-bg').fadeIn();
+
+
+    // document.querySelector('.btn').addEventListener('click', function(){
+    //   document.querySelector('.white-bg').classList.toggle('show');
+    // })
+
+    // $('.btn').toggleClass('.white-bg')
+  </script>
+
 </body>
 </html>
