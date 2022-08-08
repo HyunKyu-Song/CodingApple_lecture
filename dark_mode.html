@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box{
+      border: 5px solid;
+      border-radius: 30px;
+      padding: 20px;
+      background-color: coral;
+      margin-top: 10px;
+    }
+    .badge{
+      border: 2px solid black;
+      
+      border-radius: 10px;
+      padding: 5px;
+      color: gray;
+    }
+  </style>
+</head>
+<body>
+  <span class="badge bg-dark">Dark 🔄</span>
+  <div class="box">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, et. Ipsa ex distinctio laborum. Eaque eius assumenda autem corporis ipsum quibusdam laborum sapiente voluptatum dolor molestiae. Reprehenderit omnis numquam incidunt!
+  </div>
+
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+  <script>
+    var cnt = 0;
+
+    $('.badge').on('click', function(){
+      cnt++;
+      if(cnt % 2 == 0){
+        $('.box').css('color', 'white');
+        $('.box').css('background-color', 'black');
+        $('.badge').val('black');
+        document.querySelector('.badge').innerHTML = 'White 🔄';
+        $('.badge').css('background-color', 'white');
+        $('.badge').css('color', 'black');
+      }
+      else{
+        $('.box').css('color', 'black');
+        $('.box').css('background-color', 'white');
+        $('.badge').val('white');
+        document.querySelector('.badge').innerHTML = 'Dark 🔄';
+        $('.badge').css('background-color', 'black');
+        $('.badge').css('color', 'yellow');
+      }
+    })
+
+    // $('.badge').on('click', function(){
+    //   if($('.badge').val() == 'white'){
+    //     $('.box').css('color', 'white');
+    //     $('.box').css('background-color', 'black');
+    //     $('.badge').val('black');
+    //     document.querySelector('.badge').innerHTML = 'White 🔄';
+    //     $('.badge').css('background-color', 'white');
+    //     $('.badge').css('color', 'black');
+    //   }
+    //   else{
+    //     $('.box').css('color', 'black');
+    //     $('.box').css('background-color', 'white');
+    //     $('.badge').val('white');
+    //     document.querySelector('.badge').innerHTML = 'Dark 🔄';
+    //     $('.badge').css('background-color', 'black');
+    //     $('.badge').css('color', 'yellow');
+    //   }
+    // })
+  </script>
+</body>
+</html>
