@@ -4,19 +4,34 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./assignment_6.css">
-  <title>Assignment - animation</title>
+  <title>Document</title>
 </head>
 <body>
-  <div class="ani-box">흔들버튼</div>
-  <hr>
 
-  <div class="ani-cross">+</div>
-  <hr>
-  
-  <div class="ani-menu">
-    <div class="menu">Menu</div>
-    <div class="item">item</div>
-  </div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+  <script>
+    // function sec(m, s){
+    //   var total = 0;
+      
+    //   total = ((m * 60) + s) * 1000;
+
+    //   return total;
+    // }
+    // console.log(sec(2, 10));
+
+
+    function sale(price, first){
+      price -= (price * 0.1);
+
+      if(first)
+        price -= 1.5;
+      
+      price = price.toFixed(1)
+      
+      return (parseFloat(price));
+    }
+    console.log(sale(10.3, false));
+  </script>
 </body>
 </html>
