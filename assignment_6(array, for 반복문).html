@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  <title>Document</title>
+</head>
+<body>
+  
+
+  <script 
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous">
+  </script>
+
+  <script 
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
+  </script>
+
+  <script>
+    //출석부에서 이름 찾기
+    var 출석부 = ['흥민', '영희', '철수', '재석', '영희'];
+
+    function 이름찾기(name){
+      var find;
+      var cnt = 0;
+
+      for(var find in 출석부){
+        if(출석부[find] == name){
+          console.log('있음');
+          cnt = 1;
+          return;
+        }
+      }
+      if(cnt == 0){
+        console.log('없음');
+      }
+    }
+
+    //구구단 출력
+    for(var i = 2; i < 10; i++){
+      for(var j = 1; j < 10; j++){
+        // console.log(i*j);
+      }
+    }
+
+    //모의고사 성적
+    let grade = [10, 20, 30, 40, 50];
+
+    function 모의고사(inp1, num){
+      let avg = 0;
+      let sum = 0;
+      
+      for(let i = 0; i < inp1.length; i++){
+        sum += inp1[i];
+      }
+      avg = sum / inp1.length;
+      if(avg > num){
+        console.log(`평균보다 ${avg-num}점이 떨어졌네요.`);
+      }
+      else{
+        console.log(`평균보다 ${num-avg}점이 올랐네요.`);
+      }
+    }
+
+
+  </script>
+</body>
+</html>
