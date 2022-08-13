@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .card-background{
+      height: 3000px;
+      margin-top: 800px;
+      margin-bottom: 1600px;
+    }
+    .card-box img{
+      display: block;
+      margin: auto;
+      max-width: 80%;
+    }
+    .card-box{
+      position: sticky;
+      top: 250px;
+      margin-top: 200px;
+      /* transition: all 0.2s; */
+    }
+    
+  </style>
+</head>
+<body>
+  <div class="card-background">
+    <div class="card-box">
+      <img src="./img/card1.png" alt="">
+    </div>
+    <div class="card-box">
+      <img src="./img/card2.png" alt="">
+    </div>
+    <div class="card-box">
+      <img src="./img/card3.png" alt="">
+    </div>
+    <div>
+      <p style="color: red;">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae omnis quia fugit quae, dolore possimus magni deserunt doloribus accusamus impedit nulla tempora maiores ipsum explicabo asperiores sint totam autem vero.
+      </p>
+      <p style="color: orange;">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae omnis quia fugit quae, dolore possimus magni deserunt doloribus accusamus impedit nulla tempora maiores ipsum explicabo asperiores sint totam autem vero.
+      </p>
+      <p style="color: yellow;">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae omnis quia fugit quae, dolore possimus magni deserunt doloribus accusamus impedit nulla tempora maiores ipsum explicabo asperiores sint totam autem vero.
+      </p>
+      <p style="color: green;">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae omnis quia fugit quae, dolore possimus magni deserunt doloribus accusamus impedit nulla tempora maiores ipsum explicabo asperiores sint totam autem vero.
+      </p>
+      <p style="color: blue;">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae omnis quia fugit quae, dolore possimus magni deserunt doloribus accusamus impedit nulla tempora maiores ipsum explicabo asperiores sint totam autem vero.
+      </p>
+      <p style="color: darkblue;">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae omnis quia fugit quae, dolore possimus magni deserunt doloribus accusamus impedit nulla tempora maiores ipsum explicabo asperiores sint totam autem vero.
+      </p>
+      <p style="color: purple;">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae omnis quia fugit quae, dolore possimus magni deserunt doloribus accusamus impedit nulla tempora maiores ipsum explicabo asperiores sint totam autem vero.
+      </p>
+    </div>
+  </div>
+
+
+
+
+  <script 
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
+  </script>
+
+  <script>
+    $(window).on('scroll', function(){
+      // console.log($(window).scrollTop());
+      var x = (-1/500) * $(window).scrollTop() + (12/5);
+      var size = (-1/5000) * $(window).scrollTop() + (57/50);
+      $('.card-box').eq(0).css('opacity', x);
+      // $('.card-box').eq(0).css('transform', 'scale(0.8)');
+      $('.card-box').eq(0).css('transform', `scale(${size})`);
+
+      var y = (-1/600) * $(window).scrollTop() + (19/6);
+      var size = (-1/6000) * $(window).scrollTop() + (73/60);
+      $('.card-box').eq(1).css('opacity', y);
+      $('.card-box').eq(1).css('transform', `scale(${size})`);
+      
+      // var z = (-1/100) * $(window).scrollTop() + (192/10);
+      var z = (-1/600) * $(window).scrollTop() + (13/3);
+      var size = (-1/6000) * $(window).scrollTop() + (86/60);
+      $('.card-box').eq(2).css('opacity', z);
+      $('.card-box').eq(2).css('transform', `scale(${size})`);
+    })
+  </script>
+</body>
+</html>

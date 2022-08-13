@@ -28,7 +28,7 @@
   <script>
     var cartList = JSON.parse(localStorage.getItem('cart'));
     
-    for(var i = 0; i < 4; i++){
+    for(var i = 0; i < cartList.length; i++){
       $('.cart-list').append(`${i+1}. ${cartList[i]}<br>`);
     }
   </script>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .slide-container{
+      width: 400vw;
+      transition: all 1s;
+
+    }
+    .slide-box{
+      width: 100vw;
+      float: left;
+    }
+    .slide-box img{
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div style="overflow-x: hidden;">
+    <div class="slide-container">
+      <div class="slide-box">
+        <img src="./car1.png" alt="">
+      </div>
+      <div class="slide-box">
+        <img src="./car2.png" alt="">
+      </div>
+      <div class="slide-box">
+        <img src="./car3.png" alt="">
+      </div>
+      <div class="slide-box">
+        <img src="./img/portfolio-1.jpg" style="width: 75%" alt="">
+      </div>
+    </div>
+  </div>
+  <button class="prev">prev</button>
+  <button class="slide-1 num" value="num1">1</button>
+  <button class="slide-2 num" value="num2">2</button>
+  <button class="slide-3 num" value="num3">3</button>
+  <button class="slide-4 num" value="num4">4</button>
+  <button class="next">next</button>
+
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+  <script>
+
+    var post = 1;
+    $('.next').on('click', function(){
+      if(post > 3)
+        post = 0;
+      $('.slide-container').css('transform', 'translateX(-'+post+'00vw)');
+      post += 1;
+    });
+    
+    $('.prev').on('click', function(){
+      if(post < 0)
+        post = 3;
+      $('.slide-container').css('transform', 'translateX(-'+post+'00vw)');
+      post -= 1;
+    });
+
+    $('.slide-1').on('click', function(){
+      $('.slide-container').css('transform', 'translateX(0)');
+      post = 1;
+    })
+    $('.slide-2').on('click', function(){
+      $('.slide-container').css('transform', 'translateX(-100vw)');
+      post = 2;
+    })
+    $('.slide-3').on('click', function(){
+      $('.slide-container').css('transform', 'translateX(-200vw)');
+      post = 3;
+    })
+    $('.slide-4').on('click', function(){
+      $('.slide-container').css('transform', 'translateX(-300vw)');
+      post = 4;
+    })
+
+
+
+
+
+
+
+    // $('.next').on('click', function(){
+    //   if($('.num').val() == 'num1'){
+    //     // $('.slide-container').css('transform', 'translateX(0)');
+    //     $('.slide-container').css('transform', 'translateX(-100vw)');
+    //     $('.num').val('num2');
+    //     // alert('2번째 사진으로');
+    //   }
+    //   else if($('.num').val() == 'num2'){
+    //     // $('.slide-container').css('transform', 'translateX(-100vw)');
+    //     $('.slide-container').css('transform', 'translateX(-200vw)');
+    //     $('.num').val('num3');
+    //     // alert('3번째 사진으로');
+    //   }
+    //   else{
+    //     // $('.slide-container').css('transform', 'translateX(-200vw)');
+    //     $('.slide-container').css('transform', 'translateX(0)');
+    //     $('.num').val('num1');
+    //     // alert('1번째 사진으로');
+    //   }
+    // });
+  </script>
+
+</body>
+</html>
