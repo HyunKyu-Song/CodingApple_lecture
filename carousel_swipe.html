@@ -8,7 +8,7 @@
   <style>
     .slide-container{
       width: 400vw;
-      transition: all 1s;
+      /* transition: all 0.5s; */
 
     }
     .slide-box{
@@ -24,16 +24,16 @@
   <div style="overflow-x: hidden;">
     <div class="slide-container">
       <div class="slide-box">
-        <img src="./car1.png" alt="">
+        <img src="./car1.png" alt="" draggable="false">
       </div>
       <div class="slide-box">
-        <img src="./car2.png" alt="">
+        <img src="./car2.png" alt="" draggable="false">
       </div>
       <div class="slide-box">
-        <img src="./car3.png" alt="">
+        <img src="./car3.png" alt="" draggable="false">
       </div>
       <div class="slide-box">
-        <img src="./img/portfolio-1.jpg" style="width: 75%" alt="">
+        <img src="./img/portfolio-1.jpg" style="width: 75%" alt="" draggable="false">
       </div>
     </div>
   </div>
@@ -48,6 +48,117 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
   <script>
+    var start = 0;
+    var press = false;
+    // $('.slide-box').eq(0).on('mousedown', function(e){
+    //   start = e.clientX;
+    //   press = true;
+    //   console.log(`시작 = ${start}`);
+    // })
+
+    // $('.slide-box').eq(0).on('mouseup', function(e){
+    //   press = false;
+      
+    //   if(e.clientX - start < -300 && press == false){
+    //     $('.slide-container').css('transition', 'all 0.5s').css('transform', 'translateX(-100vw)');
+    //     console.log('a');
+    //   }
+    //   else{
+    //     $('.slide-container').css('transition', 'all 0.5s').css('transform', 'translateX(0)');
+    //     console.log('b');
+    //   }
+
+    //   setTimeout(function(){
+    //     $('.slide-container').css('transition', 'none');
+    //   }, 500);
+    // })
+
+    // $('.slide-box').eq(0).on('mousemove', function(e){
+    //   if(press == true){
+    //     $('.slide-container').css('transform', `translate(${e.clientX - start}px)`);
+        
+    //     console.log(`현재-시작 = ${e.clientX - start}`);
+    //   }
+      
+    //   // console.log(`press = ${press}`);
+    // })
+    
+
+    for(var i = 0; i < 3; i++){
+      $('.slide-box').eq(i).on('mousedown', function(e){
+        start = e.clientX;
+        press = true;
+        console.log(`시작 = ${start}`);
+      })
+
+      $('.slide-box').eq(i).on('mousemove', function(e){
+        if(press == true){
+          $('.slide-container').css('transform', `translate(${e.clientX - start}px)`);
+          
+          console.log(`현재-시작 = ${e.clientX - start}`);
+        }
+      })
+    }
+
+
+
+
+
+
+    var cnt = 0;
+
+    $('.slide-box').eq(0).on('mouseup', function(e){
+      press = false;
+      
+      if(e.clientX - start < -300 && press == false ){
+        $('.slide-container').css('transition', 'all 0.5s').css('transform', 'translateX(-100vw)');
+      }
+      else{
+        $('.slide-container').css('transition', 'all 0.5s').css('transform', 'translateX(0)');
+      }
+
+      setTimeout(function(){
+        $('.slide-container').css('transition', 'none');
+        }, 500);
+      })
+  
+  
+    $('.slide-box').eq(1).on('mouseup', function(e){
+      press = false;
+      
+      if(e.clientX - start < -300 && press == false){
+        $('.slide-container').css('transition', 'all 0.5s').css('transform', 'translateX(-200vw)');
+      }
+      else{
+        $('.slide-container').css('transition', 'all 0.5s').css('transform', 'translateX(-100vw)');
+      }
+
+      setTimeout(function(){
+        $('.slide-container').css('transition', 'none');
+        }, 500);
+      })
+  
+  
+    $('.slide-box').eq(2).on('mouseup', function(e){
+      press = false;
+      
+      if(e.clientX - start < -300 && press == false){
+        $('.slide-container').css('transition', 'all 0.5s').css('transform', 'translateX(-300vw)');
+      }
+      else{
+        $('.slide-container').css('transition', 'all 0.5s').css('transform', 'translateX(-200vw)');
+      }
+
+      setTimeout(function(){
+        $('.slide-container').css('transition', 'none');
+        }, 500);
+      })
+
+
+
+
+
+
 
     var post = 1;
     $('.next').on('click', function(){
