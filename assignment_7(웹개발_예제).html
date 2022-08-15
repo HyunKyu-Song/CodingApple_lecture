@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  <link rel="stylesheet" href="./assignment_7(웹개발_예제).css">
+  <title>Document</title>
+</head>
+<body>
+  <div class="background-container">
+    <ul class="nav">
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="#" style="font-size: 20px; padding-right: 20px;">집꾸미기</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">스토어</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link">시공견적</a>
+      </li>
+    </ul>
+    <main>
+      <div class="products">
+        <label for="search"></label>
+        <input type="text" class="search-box" id="search" placeholder="검색어입력">
+        <div class="row card-box"></div>
+      </div>
+
+      <div class="cart">
+        <span class="cart-text">장바구니</span>
+        <div class="drag">
+          <p class="drag-text" ondrop="drop(event)" ondragover="allowDrop(event)">여기로 드레그</p>
+        </div>
+      </div>
+    </main>
+  </div>
+
+
+  <script 
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+    crossorigin="anonymous">
+  </script>
+  <script 
+  src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
+  </script>
+
+  <script>
+    // $.get('./store.json')
+    //   .done(function(data){
+    //     var name = [];
+    //     var brand = [];
+    //     for(var i = 0; i < 4; i++){
+    //       goods = 
+    //         `<div class="card">
+    //           <img src="./pr${i+1}.JPG" class="card-img-top">
+    //           <div class="card-body">
+    //             <h5 class="card-title">${data.products[i].title}</h5>
+    //             <p class="card-text">${data.products[i].brand}</p>
+    //             <p class="card-text">가격: ${data.products[i].price}</p>
+    //             <a href="#" class="btn btn-primary">닫기</a>
+    //           </div>
+    //         </div>`;
+    //       name.push(data.products[i].title);
+    //       brand.push(data.products[i].brand);
+    //       $('.card-box').append(goods);
+    //     }
+    //   });
+
+    function LoadData(){
+      $.get('./store.json')
+      .done(function(data){
+        var name = [];
+        var brand = [];
+        for(var i = 0; i < 4; i++){
+          goods = 
+            `<div class="card" ondrop="drop(event)" ondragover="allowDrop(event)">
+              <img src="./pr${i+1}.JPG" id="drag" class="card-img-top" draggable="true" ondragstart="drag(event)">
+              <div class="card-body">
+                <h5 class="card-title">${data.products[i].title}</h5>
+                <p class="card-text">${data.products[i].brand}</p>
+                <p class="card-text">가격: ${data.products[i].price}</p>
+                <a href="#" class="btn btn-primary">담기</a>
+              </div>
+            </div>`;
+          name.push(data.products[i].title);
+          brand.push(data.products[i].brand);
+          $('.card-box').append(goods);
+        }
+      });
+    }
+    LoadData();
+
+    function allowDrop(ev) {
+      ev.preventDefault();
+    }
+    
+    function drag(ev) {
+      ev.dataTransfer.setData("text", ev.target.id);
+    }
+    
+    function drop(ev) {
+      ev.preventDefault();
+      var data = ev.dataTransfer.getData("text");
+      ev.target.appendChild(document.getElementById(data));
+    }
+      // $('#search').on('keydown', function(){
+    //   if($('#search').val() === )
+    // });
+
+
+
+
+    // function 상품(idx){
+    //   goods = 
+    //     `<div class="card">
+    //       <img src="./pr${idx+1}.JPG" class="card-img-top">
+    //       <div class="card-body">
+    //         <h5 class="card-title">${product.products[idx].title}</h5>
+    //         <p class="card-text">${product.products[idx].brand}</p>
+    //         <p class="card-text">가격: ${product.products[idx].price}</p>
+    //         <a href="#" class="btn btn-primary">닫기</a>
+    //       </div>
+    //     </div>`;
+      
+    //   return goods;
+    // }
+    // $('.card-box').append(상품(1));
+
+
+    // $('#search').on('keydown', function(e){
+    //   console.log($('#search').val());
+    //   if($('.card-title').eq(0).html())
+    //   console.log($('.card-title').eq(1).html());
+    //   if($('#search').val() === $('.card-title').eq(0).html()){
+    //     console.log('맞음');
+    //   }
+    //   if($('.card-title').eq(0).html().includes($('#search').val())){
+    //     $('.card-box').html('');
+    //     $('.card-box').append(goods);
+    //   }
+    // })
+
+  </script>
+</body>
+</html>
